@@ -6,7 +6,7 @@ from app_home import run_home_app
 
 
 def main() :
-    st.title('초,중,고별 읽는 책의 형태')
+    st.title('초,중,고별 읽는 책의 형태!!!')
     
     menu = ['Home', 'Elementary', 'Middle', 'High']
 

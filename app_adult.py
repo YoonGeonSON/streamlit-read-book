@@ -11,6 +11,8 @@ def run_adult_app() :
 
     df = df.drop("HLDY_AT" , axis=1)
 
+    df = df.rename(columns={'BOOK_TY_NM':'책_형태'})
+
     if st.checkbox('데이터 프레임 보기') :
         st.dataframe( df )
 

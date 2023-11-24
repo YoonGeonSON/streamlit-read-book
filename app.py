@@ -12,7 +12,7 @@ def main() :
     
     menu = ['Home', 'Adult', 'Student']
 
-    choice = st.sidebar.selectbox('학년선택', menu)
+    choice = st.sidebar.selectbox('카테고리', menu)
 
     if choice == menu[0] :
         run_home_app()

@@ -1,8 +1,10 @@
 import streamlit as st
+import plotly.express as px
+import altair as alt
 
 from app_home import run_home_app 
 from app_adult import run_adult_app
-
+from app_student import run_student_app
 
 
 
@@ -19,7 +21,7 @@ def main() :
     elif choice == menu[1] :
         run_adult_app()
     elif choice == menu[2] :
-        pass
+        run_student_app()
     
 
 

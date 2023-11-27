@@ -1,8 +1,6 @@
 import streamlit as st
-
-import plotly.express as px
 import pandas as pd
-import altair as alt
+
 
 
 def run_adult_app() :

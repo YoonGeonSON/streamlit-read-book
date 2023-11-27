@@ -1,6 +1,4 @@
 import streamlit as st
-import plotly.express as px
-import altair as alt
 
 from app_home import run_home_app 
 from app_adult import run_adult_app

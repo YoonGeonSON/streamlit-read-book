@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sb
 import pandas as pd
 
+
 def run_adult_app() :
-    st.title('성인 데이터 분석')
+    st.title('성인이 읽는 책 형태의 데이터 분석')
 
     st.info('차트보기')
     
@@ -32,13 +33,14 @@ def run_adult_app() :
     df = df[df.columns[1]].value_counts()
     
     fig = plt.figure()
-    plt.rc('font', family = 'Malgun Gothic')
+    
 
     plt.pie(df, labels= df.index , autopct="%1.f", startangle=90, wedgeprops={"width":0.7})
     plt.legend()
-    plt.title("책 형태")
+    plt.title("읽는 책 형태")
     st.pyplot(fig)
-
+ 
+    
    
     
 

@@ -4,10 +4,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sb
 
+
+import platform
+from matplotlib import font_manager, rc
+plt.rcParams['axes.unicode_minus'] = False
+if platform.system() == 'Linux':
+    rc('font', family='NanumGothic')
+
 from app_home import run_home_app 
 from app_adult import run_adult_app
 from app_student import run_student_app
-from matplotlib import font_manager, rc
+
 
 
 

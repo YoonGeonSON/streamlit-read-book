@@ -1,7 +1,8 @@
 import streamlit as st
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sb
 import pandas as pd
-
-
 
 def run_adult_app() :
     st.title('성인 데이터 분석')
@@ -18,13 +19,37 @@ def run_adult_app() :
 
     df = df.rename(columns={'FLAG_VALUE':'연령'})
 
-    df = df.tail(83)
+    df = df.loc[df["연령"].isin(['19-29세', '30-39세', '40-49세','50-59세', '60세이상'])]
+
+    
 
     if st.checkbox('데이터 프레임 보기') :
         st.dataframe( df )
 
     else :
         st.text('')    
+
+    df = df[df.columns[1]].value_counts()
+    
+    fig = plt.figure()
+    plt.rc('font', family = 'Malgun Gothic')
+
+    plt.pie(df, labels= df.index , autopct="%1.f", startangle=90, wedgeprops={"width":0.7})
+    plt.legend()
+    plt.title("책 형태")
+    st.pyplot(fig)
+
+   
+    
+
+                         
+
+   
+
+
+    
+
+
 
     
         

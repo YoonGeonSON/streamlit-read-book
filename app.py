@@ -1,14 +1,19 @@
 import streamlit as st
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sb
 
 from app_home import run_home_app 
 from app_adult import run_adult_app
 from app_student import run_student_app
+from matplotlib import font_manager, rc
 
 
 
 
 def main() :
-    st.title('성인과 학생의 읽는 책의 형태')
+    st.title('학생과 성인의 읽는 책의 형태')
     
     menu = ['Home', 'Adult', 'Student']
 

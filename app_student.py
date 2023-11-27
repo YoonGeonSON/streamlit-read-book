@@ -1,7 +1,8 @@
 import streamlit as st
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sb
 import pandas as pd
-
-
 
 def run_student_app() :
     st.title('학생 데이터 분석')
@@ -18,12 +19,22 @@ def run_student_app() :
 
     df = df.rename(columns={'FLAG_VALUE':'연령'})
 
-    df = df.tail(83)
+    df = df.tail(53)
 
     if st.checkbox('데이터 프레임 보기') :
         st.dataframe( df )
 
     else :
         st.text('') 
+
+    df3 = df[df.columns[1]].value_counts()
+    
+    fig = plt.figure()
+    plt.rc('font', family = 'Malgun Gothic')
+
+    plt.pie(df3, labels= df3.index , autopct="%1.f", startangle=90, wedgeprops={"width":0.7})
+    plt.legend()
+    plt.title("책 형태")
+    st.pyplot(fig)
 
 

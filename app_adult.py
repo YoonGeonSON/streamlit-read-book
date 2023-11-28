@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sb
 import pandas as pd
 
+import platform
+from matplotlib import font_manager, rc
+plt.rcParams['axes.unicode_minus'] = False
+if platform.system() == 'Linux':
+    rc('font', family='NanumGothic')
 
 def run_adult_app() :
     st.title('성인이 읽는 책 형태의 데이터 분석')

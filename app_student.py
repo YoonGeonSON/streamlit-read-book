@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sb
 import pandas as pd
 
+
+
 def run_student_app() :
     st.title('학생이 읽는 책 형태의 데이터 분석')
 
